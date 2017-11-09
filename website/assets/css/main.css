@@ -2899,6 +2899,250 @@
 
 		}
 
+
+/* Banner */
+
+	.banner {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		postiion: relative;
+		margin: -2.5em 0 0 -2.5em;
+	}
+
+		.banner article {
+			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+			transition: transform 0.5s ease, opacity 0.5s ease;
+			position: relative;
+			width: calc(100%);
+
+			/*margin: 2.5em 0 0 2.5em;*/
+			margin: 0 0 2em 0;
+		}
+
+			.banner article > .image {
+				/*-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				position: relative;
+				display: block;
+				width: 100%;
+				border-radius: 4px;
+
+				overflow: hidden;*/
+				display: block;
+				margin: 0 0 2em 0;
+				width: 100%;
+				opacity: 0.3;
+			}
+
+				.banner article > .image img {
+					height: 70%;
+					/*height: 50%;*/
+				}
+
+
+				/*.banner article > .image:before {
+					-moz-pointer-events: none;
+					-webkit-pointer-events: none;
+					-ms-pointer-events: none;
+					pointer-events: none;
+					-moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+					-webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+					-ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+					transition: background-color 0.5s ease, opacity 0.5s ease;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0.5;
+					z-index: 1;
+					opacity: 1;
+				}*/
+
+				/*.banner article > .image:after {
+					-moz-pointer-events: none;
+					-webkit-pointer-events: none;
+					-ms-pointer-events: none;
+					pointer-events: none;
+					-moz-transition: opacity 0.5s ease;
+					-webkit-transition: opacity 0.5s ease;
+					-ms-transition: opacity 0.5s ease;
+					transition: opacity 0.5s ease;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+					background-position: left;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					opacity: 0.25;
+					z-index: 2;
+				}
+				*/
+
+			.banner article > a {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-moz-align-items: left;
+				-webkit-align-items: left;
+				-ms-align-items: center;
+				align-items: left;
+				-moz-justify-content: left;
+				-webkit-justify-content: left;
+				-ms-justify-content: left;
+				justify-content: left;
+				-moz-transition: background-color 0.5s ease, -moz-transform 0.5s ease;
+				-webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+				-ms-transition: background-color 0.5s ease, -ms-transform 0.5s ease;
+				transition: background-color 0.5s ease, transform 0.5s ease;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding: 0em;
+				border-radius: 4px;
+				border-bottom: 0;
+				/*color: #ffffff;*/
+				text-align: left;
+				text-decoration: none;
+				z-index: 3;
+			}
+
+
+				.banner article > a:hover {
+					color: inherit !important;
+				}
+
+					.banner article > a .content > :last-child {
+						margin-bottom: 0;
+					}
+/*
+			.banner article.style1 > .image:before {
+				opacity: 0;
+			}
+*/
+
+
+			/*body:not(.is-touch) .banner article:hover > .image {
+				-moz-transform: scale(1.1);
+				-webkit-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				transform: scale(1.1);
+			}
+
+				body:not(.is-touch) .banner article:hover > .image:before {
+					background-color: #333333;
+					opacity: 0.35;
+				}
+
+				body:not(.is-touch) .banner article:hover > .image:after {
+					opacity: 0;
+				}
+
+			body:not(.is-touch) .banner article:hover .content {
+				max-height: 15em;
+				opacity: 1;
+			}*/
+/*
+		* + .banner {
+			margin-top: 2em;
+		}
+
+		body.is-loading .banner article {
+			-moz-transform: scale(0.9);
+			-webkit-transform: scale(0.9);
+			-ms-transform: scale(0.9);
+			transform: scale(0.9);
+			opacity: 0;
+		}
+
+		body.is-touch .banner article .content {
+			max-height: 15em;
+			opacity: 1;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.banner {
+				margin: -1.25em 0 0 -1.25em;
+			}
+
+				.banner article {
+					width: calc(33.33333% - 1.25em);
+					margin: 1.25em 0 0 1.25em;
+				}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.banner {
+				margin: -2.5em 0 0 -2.5em;
+			}
+
+				.banner article {
+					width: calc(50% - 2.5em);
+					margin: 2.5em 0 0 2.5em;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.banner {
+				margin: -1.25em 0 0 -1.25em;
+			}
+
+				.banner article {
+					width: calc(50% - 1.25em);
+					margin: 1.25em 0 0 1.25em;
+				}
+
+					.banner article:hover > .image {
+						-moz-transform: scale(1.0);
+						-webkit-transform: scale(1.0);
+						-ms-transform: scale(1.0);
+						transform: scale(1.0);
+					}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.banner {
+				margin: 0;
+			}
+
+				.banner article {
+					width: 100%;
+					margin: 1.25em 0 0 0;
+				}
+
+		}*/
+
 /* Header */
 
 	#header {
@@ -2910,6 +3154,7 @@
 			border-bottom: 0;
 			color: inherit;
 			font-weight: 900;
+			/*font-size: 1.5em;*/
 			letter-spacing: 0.35em;
 			margin: 0 0 2.5em 0;
 			text-decoration: none;
@@ -2931,6 +3176,38 @@
 					width: 6em;
 					height: 6em;
 				}
+
+		#header .banner {
+			display: block;
+			border-bottom: 0;
+			color: inherit;
+			font-weight: 900;
+			letter-spacing: 0.35em;
+			margin: 0 0 2.5em 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+		}
+
+			#header .banner > * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			#header .banner .image {
+				margin-right: 0.65em;
+			}
+
+				#header .banner .image img {
+					display: block;
+					width: 6em;
+					height: 6em;
+				}
+
+			#header .banner > a:hover {
+					color: #000000 !important;
+				}
+
 
 		#header nav {
 			position: fixed;
